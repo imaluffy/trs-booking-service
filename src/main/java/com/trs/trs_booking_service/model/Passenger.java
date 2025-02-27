@@ -1,19 +1,21 @@
 package com.trs.trs_booking_service.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Embeddable
+@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Passenger {
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    private Long pid;
+    private Long pnr;
     private Integer seatNo;
     private String name;
 
