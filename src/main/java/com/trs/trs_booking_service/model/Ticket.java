@@ -19,9 +19,9 @@ public class Ticket {
     private Long userId;
     private Long paymentId;
     private Integer trainId;
-    LocalDate bookingDate;
-    Boolean pnrActive;
-    Double totalFare;
+    private LocalDate bookingDate;
+    private Boolean pnrActive;
+    private Double totalFare;
 
     private TrainInfo trainInfo;
     @ElementCollection
