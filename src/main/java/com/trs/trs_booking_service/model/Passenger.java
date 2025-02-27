@@ -21,6 +21,7 @@ public class Passenger {
     @Enumerated(EnumType.STRING)
     private Gender gender;
     private Integer age;
+    private Boolean active;
 
     public enum Gender{
         M, F
