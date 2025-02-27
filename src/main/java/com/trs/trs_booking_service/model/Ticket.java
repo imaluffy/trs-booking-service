@@ -22,15 +22,15 @@ public class Ticket {
     private LocalDate bookingDate;
     private Boolean pnrActive;
     private Double totalFare;
-
     private TrainInfo trainInfo;
-    @ElementCollection
+    @OneToMany(cascade=CascadeType.ALL,orphanRemoval = true)
+    @JoinColumn(name = "pnr")
     private List<Passenger> passengerList;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private BookingStatus bookingStatus;
     public enum BookingStatus{
-        CANCELLED, BOOKED
+        CANCELLED, BOOKED, PARTIAL
     }
 }
