@@ -14,17 +14,16 @@ import java.time.LocalTime;
 @Data
 @Embeddable
 public class TrainInfo {
-    String trainName;
+    private String trainName;
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    Coach coachType;
-    String sourceStation;
-    String destinationStation;
-
-    LocalTime sourceTime;
-    LocalTime destinationTime;
-    Integer journeyDurationInMins;
-    Integer distanceInKms;
+    private Coach coachType;
+    private String sourceStation;
+    private String destinationStation;
+    private LocalTime sourceTime;
+    private LocalTime destinationTime;
+    private Integer journeyDurationInMins;
+    private Integer distanceInKms;
 
     public enum Coach{
         SL, AC
